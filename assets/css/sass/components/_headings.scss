@@ -1,0 +1,25 @@
+/*====================== start heading ======================================*/
+.head-with-border {
+  position: relative;
+  h2 {
+    text-align: center;
+    margin: 40px auto;
+    color: white;
+    padding: 10px 15px;
+    width: 400px;
+    // background-color: $redColor;
+
+    &:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 50%;
+      // background-color: $grayColor;
+      width: 100%;
+      height: 1.5px;
+      z-index: -1;
+    }
+  }
+}
+
+/*====================== end heading ======================================*/

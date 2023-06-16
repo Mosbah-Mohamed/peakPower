@@ -1,0 +1,390 @@
+/*====================== start global page ======================================*/
+
+@font-face {
+  font-family: "Bahij_Bold";
+  src: url(../fonts/Bahij_TheSansArabic-Bold.ttf);
+}
+
+@font-face {
+  font-family: "Bahij_Light";
+  src: url(../fonts/Bahij_TheSansArabic-Light.ttf);
+}
+
+@font-face {
+  font-family: "Bahij_SemiBold";
+  src: url(../fonts/Bahij_TheSansArabic-SemiBold.ttf);
+}
+
+@font-face {
+  font-family: "Bahij_ExtraBold";
+  src: url(../fonts/Bahij_TheSansArabic-ExtraBold.ttf);
+}
+@font-face {
+  font-family: "Bahij Helvetica Neue";
+  src: url(../fonts/BAHIJ_HELVETICA_NEUE_LIGHT.TTF);
+}
+@font-face {
+  font-family: "Roboto";
+  src: url(../fonts/roboto.regular.ttf);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body::-webkit-scrollbar,
+.side-bar::-webkit-scrollbar,
+.profile .box_content .profile-product .table-responsive::-webkit-scrollbar {
+  width: 8px;
+}
+
+body::-webkit-scrollbar-track,
+.side-bar::-webkit-scrollbar-track,
+.profile
+  .box_content
+  .profile-product
+  .table-responsive::-webkit-scrollbar-track {
+  background-color: $white;
+  border-radius: 1rem;
+  box-shadow: inset 0 0 2.5px 2px rgba(0, 0, 0, 0.5);
+}
+
+body::-webkit-scrollbar-thumb,
+.side-bar::-webkit-scrollbar-thumb,
+.profile
+  .box_content
+  .profile-product
+  .table-responsive::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: #2c2a2a;
+}
+
+body {
+  font-family: "Bahij Helvetica Neue";
+  direction: rtl;
+  text-align: start;
+  color: $white;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.text-ellipsis {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+}
+
+section {
+  overflow: hidden !important;
+}
+
+.owl-carousel {
+  direction: ltr !important;
+}
+
+.slick-slider {
+  direction: ltr;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+  color: $second;
+  &:hover {
+    color: $second;
+  }
+}
+
+.under-bord {
+  position: absolute;
+  width: 95px;
+  height: 5px;
+  bottom: 0;
+  background: #2a8b23;
+  // margin-bottom: 21px;
+  display: block;
+}
+.section_heading {
+  position: relative;
+  h2 {
+    font-size: 33px;
+    color: #252525;
+    font-family: "Bahij_Bold";
+    padding-bottom: 15px;
+  }
+}
+
+// start nice select
+
+.nice-select {
+  width: 100%;
+  margin-bottom: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-right: 10px;
+}
+
+.nice-select ul.list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 100%;
+}
+
+.nice-select ul.list li {
+  width: 100%;
+  text-align: right;
+}
+
+.nice-select::after {
+  width: 10px;
+  height: 10px;
+  right: 93%;
+}
+
+// end nice select
+
+// start input file
+
+.upload {
+  position: relative;
+  cursor: pointer;
+  input {
+    opacity: 0;
+    visibility: hidden;
+    display: none;
+    height: 0;
+    overflow: hidden;
+    width: 0;
+  }
+  label {
+    margin-bottom: 10px;
+    padding: 17px 20px 20px;
+    color: #6d6d6d !important;
+    border: 1px solid #e7e7e7;
+    width: 100%;
+    font-weight: normal !important;
+    cursor: pointer;
+
+    &::after {
+      content: "\f093";
+      font-family: "Font Awesome 5 Free";
+      font-weight: 900;
+      position: absolute;
+      top: 23px;
+      left: 20px;
+    }
+  }
+}
+
+// end input file
+
+// start paginate
+
+.paginate {
+  ul {
+    display: flex;
+    li {
+      width: 47px;
+      height: 47px;
+      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 1px solid #e7e7e7;
+      color: #645f5f;
+      cursor: pointer;
+
+      &.active-paginate {
+        background: #707070;
+        a {
+          color: #fff;
+        }
+      }
+
+      &:first-child {
+        border-radius: 0px 10px 10px 0px;
+      }
+
+      &:last-child {
+        border-radius: 10px 0px 0px 10px;
+      }
+
+      a {
+        span {
+        }
+      }
+    }
+  }
+}
+
+// end paginate
+
+input[type="date"] {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: end;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+label {
+  padding-inline-start: 2px;
+}
+
+p {
+  margin-bottom: 0 !important;
+}
+
+button,
+input,
+textarea {
+  outline: none;
+  border: none;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+}
+
+button:focus {
+  border: none;
+  outline: none;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@for $i from 1 through 10 {
+  .mt-#{$i}0 {
+    margin-top: #{$i}0px;
+  }
+  .mb-#{$i}0 {
+    margin-bottom: #{$i}0px;
+  }
+}
+
+// play button
+
+.btn-play {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  display: block;
+  border-radius: 50%;
+  background: radial-gradient(#0078ef 50%, rgba(5, 5, 5, 0.6) 52%);
+  margin: 20px auto;
+  text-decoration: none;
+  transition: 0.5s;
+  overflow: hidden;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 70px;
+    height: 70px;
+    top: -12px;
+    left: -9px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    animation: pulse 2s infinite;
+  }
+  i {
+    color: #fff;
+    line-height: 100px;
+    text-align: center;
+    transition: 0.5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &:hover i {
+    transform: scale(20);
+    color: $mainColor !important;
+    background: red;
+  }
+  &:hover::before {
+    position: absolute;
+    content: "";
+    left: 50%;
+    top: 50%;
+    transform: translate(-40%, -50%);
+    border: none;
+    border-top: 10px solid transparent;
+    border-left: 15px solid #fff;
+    border-bottom: 10px solid transparent;
+    width: 0;
+    height: 0;
+    animation: none;
+    border-radius: 0;
+    z-index: 101;
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.6, 0.6);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+/*====================== end global page ======================================*/

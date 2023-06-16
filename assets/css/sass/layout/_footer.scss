@@ -1,0 +1,87 @@
+// =============== start footer ========
+.footer {
+  padding: 90px 0 65px;
+  position: relative;
+  background-image: url(../../assets/imgs/Images/footer.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+  background: #1c1c1c;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .bike {
+    position: absolute;
+    width: 600px;
+    top: 14%;
+    left: 28%;
+  }
+
+  .info {
+    display: flex;
+    gap: 25px;
+    margin-top: 60px;
+
+    img {
+      min-width: 127px;
+      height: 127px;
+    }
+
+    .social {
+      p {
+        padding-bottom: 15px;
+      }
+      ul {
+        display: flex;
+        gap: 18px;
+        li {
+          i {
+            cursor: pointer;
+            transition: 0.5s;
+          }
+
+          &:hover {
+            i {
+              color: #ea5b0c;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 32px;
+    color: #ea5b0c;
+  }
+  .map {
+    display: flex;
+    flex-direction: column;
+    gap: 17px;
+    margin-top: 25px;
+    li {
+      a {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        display: flex;
+        gap: 8px;
+        transition: 0.5s;
+      }
+
+      &:hover {
+        a {
+          color: #ea5b0c;
+        }
+      }
+    }
+  }
+}
+// =============== end footer ==========

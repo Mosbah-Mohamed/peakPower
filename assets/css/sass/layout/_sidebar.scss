@@ -1,0 +1,65 @@
+/*====================== start sidebar layout ================================================================= */
+
+.side-bar {
+  transition: all 1s ease-in-out;
+  background: #2c2a2a;
+  position: fixed;
+  height: 100%;
+  z-index: 99999;
+  top: 0;
+  right: -400px;
+  overflow-y: auto !important;
+  width: 250px;
+  box-shadow: 0px 3px 16px #26272759;
+  .side-bar-content {
+    background: $mainColor;
+    padding: 25px 0;
+    text-align: start;
+    padding-right: 8px;
+    ul {
+      li {
+        display: inline-block;
+        a {
+          color: #fff !important;
+          padding-left: 17px;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
+  .side-bar-route {
+    margin: 20px 0;
+    text-align: start;
+    line-height: 63px;
+    li {
+      line-height: 61px;
+      padding: 0px;
+      padding-right: 35px;
+      margin-bottom: 5px;
+      background: transparent;
+      // border-bottom: 1px solid #ddd;
+      text-indent: 18px;
+      display: block;
+      a {
+        color: #fff;
+        font-weight: 800;
+        display: block;
+      }
+      &:hover {
+        background: #ea5b0c;
+        color: #fff !important;
+        a {
+          color: #fff !important;
+        }
+      }
+    }
+  }
+}
+.side-bar.open {
+  right: 0 !important;
+  left: auto;
+}
+
+/*====================== end sidebar layout =================================================================== */

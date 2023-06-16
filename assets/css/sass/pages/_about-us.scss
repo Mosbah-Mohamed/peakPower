@@ -1,0 +1,228 @@
+// ========= start about us ==============
+.about-us {
+  padding: 85px 0;
+  position: relative;
+  background-image: url(../../assets/imgs/Images/back.png);
+  background-position: center;
+  background-size: cover;
+  width: 100%;
+
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba($color: #000000, $alpha: 0.8);
+  }
+
+  .image {
+    padding: 30px;
+    // border: 1px solid rgba($color: #fff, $alpha: 0.2);
+    border-radius: 50%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .info {
+    margin-bottom: 32px;
+    h2 {
+      border-inline-start: 6px solid #ea5b0c;
+      padding-inline-start: 8px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 48px;
+      margin-bottom: 22px;
+    }
+
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+    }
+  }
+
+  .advantage {
+    border-radius: 16px;
+    background: rgba($color: #fff, $alpha: 0.2);
+    margin-bottom: 24px;
+    display: flex;
+    gap: 23px;
+    padding: 17px 20px;
+
+    h3 {
+      background: #ffffff;
+      border-radius: 8px;
+      color: #000;
+      padding: 11px 17px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      text-align: center;
+    }
+
+    ul {
+      display: flex;
+      gap: 0 25px;
+      flex-wrap: wrap;
+
+      li {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        span.dot {
+          display: block;
+          min-width: 10px;
+          height: 10px;
+          background: #fff;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}
+
+@keyframes orbit-animation__1 {
+  from {
+    transform: rotate(0deg) translateX(220px);
+  }
+  to {
+    transform: rotate(360deg) translateX(220px);
+  }
+}
+
+// ========= end about us ================
+
+// circle animation
+
+.circleLink {
+  color: #ececec;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 120%;
+  position: relative;
+  display: inline-block;
+  border: 1px solid rgba($color: #fff, $alpha: 0.2);
+  -moz-box-flex: 0;
+  flex: 0 0 270px;
+  display: -moz-box;
+  display: flex;
+  -moz-box-pack: center;
+  justify-content: center;
+  -moz-box-align: center;
+  align-items: center;
+  border-radius: 50%;
+}
+
+.round > span:first-child {
+  position: relative;
+  color: blue;
+}
+
+.round > span:first-child::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 0;
+  border: 1px solid #ececec;
+  bottom: -5px;
+  background: #ececec;
+  border-radius: 10px;
+  left: 0;
+}
+
+.round > span:nth-child(2) {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.circleLink > span:nth-child(2) {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.circleLink > span:nth-child(2) span {
+  position: absolute;
+  top: -webkit-calc(50% - 0.5px);
+  top: -moz-calc(50% - 0.5px);
+  top: calc(50% - 0.5px);
+  left: 50%;
+  z-index: 1;
+  width: 50%;
+  height: 1px;
+  -webkit-transform-origin: left;
+  -moz-transform-origin: left;
+  transform-origin: left;
+  -webkit-animation: linkRotate 20s linear 0s infinite;
+  -moz-animation: linkRotate 20s linear 0s infinite;
+  animation: linkRotate 20s linear 0s infinite;
+  -webkit-animation-play-state: running;
+  -moz-animation-play-state: running;
+  animation-play-state: running;
+}
+
+.circleLink > span:nth-child(2) span:before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: -10px;
+  right: -10px;
+  background: #ea5b0c;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes linkRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@-moz-keyframes linkRotate {
+  0% {
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -moz-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+
+@keyframes linkRotate {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+
+  to {
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}

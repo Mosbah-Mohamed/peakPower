@@ -1,0 +1,110 @@
+/*====================== start header layout======================================*/
+
+.header {
+  background: #2c2a2a;
+  padding: 48px 0 65px;
+  width: 100%;
+  // margin-top: 117px;
+  position: relative;
+  overflow: hidden;
+
+  .owl-carousel {
+    .item {
+      // filter: drop-shadow(0px 4px 28px rgba(234, 91, 12, 0.2));
+      border-radius: 16px;
+    }
+
+    .owl-dots {
+      text-align: center;
+      padding-top: 15px;
+    }
+    .owl-dots button.owl-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      display: inline-block;
+      background: rgba($color: #fff, $alpha: 0.1);
+      margin: 0 3px;
+    }
+    .owl-dots button.owl-dot.active {
+      background-color: #fff;
+      width: 16px;
+      height: 16px;
+    }
+    .owl-dots button.owl-dot:focus {
+      outline: none;
+    }
+  }
+
+  .content {
+    h1 {
+      font-family: "Bahij Helvetica Neue";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 61px;
+      color: $white;
+      margin-bottom: 24px;
+    }
+    p {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18px;
+    }
+    .btns {
+      margin-top: 25px;
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      .list {
+        border: 1px solid transparent;
+        &:hover {
+          background: transparent;
+          border: 1px solid #ea5b0c;
+        }
+      }
+
+      .about_btn {
+        background: transparent;
+        border: 1px solid #ea5b0c;
+
+        &:hover {
+          background: #ea5b0c;
+        }
+      }
+    }
+  }
+
+  .float_image {
+    position: absolute;
+    left: 3px;
+    bottom: 50px;
+    -webkit-animation: mover 1s infinite alternate;
+    animation: mover 1s infinite alternate;
+  }
+}
+
+.header .owl-theme .owl-dots .owl-dot span {
+  width: unset;
+  height: unset;
+  background: unset;
+}
+
+@-webkit-keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes mover {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/*====================== end header layout ======================================*/

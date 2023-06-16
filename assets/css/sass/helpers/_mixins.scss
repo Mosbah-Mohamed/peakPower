@@ -1,0 +1,87 @@
+/*======================================= media query ========================================================= */
+
+@mixin xLargeMedia {
+  @media (max-width: 1999px) {
+    @content;
+  }
+}
+
+@mixin largeMedia {
+  @media (max-width: 991px) {
+    @content;
+  }
+}
+
+@mixin smallMedia {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin minMedia {
+  @media (max-width: 575px) {
+    @content;
+  }
+}
+
+/* ================================== useful mixin 1 ========================================================== */
+
+
+/*============================ auto prefixes css3 ============================================================= */
+
+@mixin prefixer($property, $value, $prefixes: ()) {
+  @each $prefix in $prefixes {
+    #{"-" + $prefix + "-" + $property}: $value;
+  }
+
+  #{$property}: $value;
+}
+
+/*================================= animation prefix ========================================================== */
+
+@mixin keyFrame($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+/*=================================== centering1 ============================================================== */
+
+
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+@mixin start_FadeInDown {
+  opacity: 0;
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+
+@mixin animation_FadeInDown {
+  animation: fadeInDown 1s both;
+  -webkit-animation: fadeInDown 1s both;
+}
+
+@mixin start_FadeInUp {
+  opacity: 0;
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+
+@mixin animation_FadeInUp {
+  animation: fadeInUp 1s both;
+  -webkit-animation: fadeInUp 1s both;
+}
